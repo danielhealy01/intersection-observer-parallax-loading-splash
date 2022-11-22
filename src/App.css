@@ -85,6 +85,7 @@ h2 {
   line-height: 31px;
 
   color: #FFFFFF;
+  
 }
 
 .scrollNotice {
@@ -163,4 +164,32 @@ h1 {
 .show2 {
   opacity: 1;
   transition: all 4s ease-out;
+}
+
+.splashTest {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  z-index: 1000;
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  scroll-snap-type: none;
+  /* display: block; */
+  transition: all 2s ease-out;
+  opacity: 1;
+}
+
+.spinner{
+  width: 30vw;
+  height: 30vw;
+  background-image: url('./assets/loadingSpinner.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30vh auto;
+  background-position-y: 2vw;
+  transition: all 1s ease-out;
+  opacity: 1;
 }

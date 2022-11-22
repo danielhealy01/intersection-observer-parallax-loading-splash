@@ -5,8 +5,12 @@
   margin: 0px;
   padding: 0px;
   overscroll-behavior: none;
-  max-width: 100vw;
-  
+  max-width: 100vw;  
+}
+
+html{
+  overflow: hidden;
+  background-color: black;
 }
 
 :root {

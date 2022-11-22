@@ -5,6 +5,26 @@ import { useEffect, useState} from "react";
 function App() {
 
   const [width, setWidth] = useState(window.innerWidth)
+  // const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector('.spinner').style.opacity = 0
+      // document.querySelector('.splashTest').style.display = "none"
+      // console.log(document.querySelector("html").style.overflow);
+    }, '1300')
+    setTimeout(() => {
+      document.querySelector('.splashTest').style.opacity = 0
+      // document.querySelector('.splashTest').style.display = "none"
+      // console.log(document.querySelector("html").style.overflow);
+    }, '2000')
+    setTimeout(() => {
+      document.querySelector("html").style.overflow = "visible";
+    }, "2500");
+    setTimeout(() => {
+      document.querySelector(".splashTest").style.display = "none";
+    }, "5000");
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -139,6 +159,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="splashTest">
+        <div className="spinner"></div>
+      </div>
       <header>
         <div className="overlay1">
           <div className="overlay2"></div>
