@@ -1,13 +1,15 @@
 import './App.css'
 import NavigationBar from './components/NavigationBar'
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 
 function App() {
+
+  const [width, setWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
+        // console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         } else {
@@ -32,8 +34,27 @@ function App() {
 
   }, [])
 
+  // useEffect(() => {
+  //   console.log(window.screen.width + " width");
+  //   let fontSizeNew = window.screen.width / 4.8;
+  //   document.querySelector(".h1").style.fontSize = `${fontSizeNew}px`;
+  //   // fontSize2 = `${window.screen.width / 4.8}px`
+  //   // fontSize2 = "1000px";
+  //   // console.log("font size" + fontSize2);
+  // }, []);
 
-
+  // console.log(width);
+  const handleResize = () => {
+    setWidth(
+      window.innerWidth
+    );
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false)
+    let fontSizeNew = width / 4.8;
+    // console.log(fontSizeNew + 'fontSizeNew')
+    document.querySelector(".h1").style.fontSize = `${fontSizeNew}px`;
+  }, [handleResize])
 
   
   window.addEventListener(`scroll`, function (e) {
@@ -44,7 +65,7 @@ function App() {
     if (scrollPosition > 0) {
       document.querySelector(".overlay2").style.opacity = `${0.5 + scrollPosition}`;
     }
-    console.log(scrollPosition)
+    // console.log(scrollPosition)
   });
 
   window.addEventListener(`scroll`, function (e) {
@@ -59,7 +80,7 @@ function App() {
       }`;
     }
     // dissapear at 0.03
-    console.log(scrollPosition2);
+    // console.log(scrollPosition2);
     // return () => window.removeEventListener("scroll");
   });
 
@@ -73,7 +94,7 @@ function App() {
         1 - scrollPosition3 * 30
       }`;
     }
-    console.log(scrollPosition3);
+    // console.log(scrollPosition3);
     // return () => window.removeEventListener("scroll");
   });
 
@@ -95,7 +116,7 @@ function App() {
         1 - (scrollPosition4 * 1.3) 
       }`;
     }
-    console.log(scrollPosition4);
+    // console.log(scrollPosition4);
     // return () => window.removeEventListener("scroll");
   });
 
@@ -120,7 +141,7 @@ function App() {
       <p className="scrollNotice">Scroll for vibe check</p>
       <section className="secondSection">
         <div className="headingContainer">
-          <h1>LISTEN LIVE NOW</h1>
+          <h1 className='h1'>LISTEN LIVE NOW</h1>
         </div>
       </section>
     </div>
