@@ -1,6 +1,6 @@
 import './App.css'
 import NavigationBar from './components/NavigationBar'
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
+import { useEffect, useState} from "react";
 
 function App() {
 
@@ -53,7 +53,7 @@ function App() {
     window.addEventListener("resize", handleResize, false)
     let fontSizeNew = width / 4.8;
     // console.log(fontSizeNew + 'fontSizeNew')
-    document.querySelector(".h1").style.fontSize = `${fontSizeNew}px`;
+    document.querySelector("h1").style.fontSize = `${fontSizeNew}px`;
   }, [handleResize])
 
   
@@ -113,12 +113,28 @@ function App() {
     }
     if (scrollPosition4 > 0.200) {
       document.querySelector("h2").style.opacity = `${
-        1 - (scrollPosition4 * 1.3) 
+        1 - (scrollPosition4 * 1.5) 
       }`;
     }
     // console.log(scrollPosition4);
     // return () => window.removeEventListener("scroll");
   });
+
+  useEffect(() => {
+    const observer2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show2");
+        } else {
+          entry.target.classList.remove("show2");
+        }
+      });
+    });
+
+    const hiddenElements2 = document.querySelectorAll(".hidden2");
+    hiddenElements2.forEach((el) => observer2.observe(el));
+  }, []);
 
 
   return (
@@ -141,7 +157,7 @@ function App() {
       <p className="scrollNotice">Scroll for vibe check</p>
       <section className="secondSection">
         <div className="headingContainer">
-          <h1 className='h1'>LISTEN LIVE NOW</h1>
+          <h1 className='hidden2'>LISTEN LIVE NOW</h1>
         </div>
       </section>
     </div>
