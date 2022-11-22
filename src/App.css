@@ -1,0 +1,155 @@
+#root {
+}
+
+header {
+  background-image: url('./assets/aleksandr-popov-hTv8aaPziOQ-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay1 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 67.64%, #000000 100%)
+}
+
+.overlay2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.5;
+}
+
+.logo {
+  height: 3.94rem;
+  width: 3.94rem;
+  position: absolute;
+  top: 4%;
+  left: 4.69%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 21px;
+
+  position: absolute;
+  width: 373px;
+  height: 42px;
+  right: 7%;
+  top: 4%;
+
+  list-style: none;
+}
+
+li {
+  width: 69px;
+  height: 22px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h2 {
+  position: absolute;
+  width: 51vw;
+  max-width:40vw;
+  height: 120px;
+  left: 7vw;
+  top: 64vh;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+
+  color: #FFFFFF;
+}
+
+.scrollNotice {
+  position: absolute;
+  width: 6vw;
+  min-width: 118px;
+  height: 6vh;
+  right: 4.24vw;
+  top: 80vh;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.secondSection {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  margin-top: -12vh;
+  /* border: 1px solid white; */
+}
+
+h1 {
+  width: 70vw;
+  height: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 300px; */
+  /* font-size: 18.75rem; */
+  font-size: clamp(18.75rem, 18.75rem, 18.75rem);
+  line-height: 363px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+
+  /* border: 1px solid white; */
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  rotate: -45deg;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s ease-in;
+  rotate: 45deg
+
+}
