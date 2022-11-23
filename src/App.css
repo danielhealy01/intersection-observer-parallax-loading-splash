@@ -85,7 +85,6 @@ h2 {
   line-height: 31px;
 
   color: #FFFFFF;
-  
 }
 
 .scrollNotice {
@@ -193,3 +192,137 @@ h1 {
   transition: all 1s ease-out;
   opacity: 1;
 }
+
+@media screen and (max-width: 601px) {
+  h2 {
+    max-width: 59vw;
+    top: 64vh;
+    margin-top: -10vh;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  h2 {
+    width: 80vw;
+    left: 7vw;
+    margin-top: -10vh;
+    font-size: 20px;
+    line-height: 25 px;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 29px;
+    position: absolute;
+    width: 42px;
+    height: 373px;
+    right: 9%;
+    top: 5%;
+  }
+
+  .scrollNotice {
+    top: 87vh;
+
+  }
+
+  .logo {
+    top: 4%;
+    left: 6%;
+  }
+
+}
+
+@media screen and (max-width: 354px) {
+  h2 {
+    width: 80vw;
+    left: 7vw;
+    margin-top: -15vh;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    position: absolute;
+    width: 42px;
+    height: 373px;
+    right: 9%;
+    top: 5%;
+  }
+
+}
+
+@media screen and (min-width: 2560px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 38px;
+
+    position: absolute;
+    width: 373px;
+    height: 42px;
+    right: 7%;
+    top: 4%;
+  }
+  
+  li {
+    width: 69px;
+    height: 22px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  h2 {
+    position: absolute;
+    width: 51vw;
+    max-width: 40vw;
+    height: 120px;
+    left: 7vw;
+    top: 64vh;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+
+    color: #FFFFFF;
+  }
+
+  .scrollNotice {
+    position: absolute;
+    width: 6vw;
+    min-width: 118px;
+    height: 6vh;
+    right: 4.24vw;
+    top: 80vh;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+}
+
+/*450px*/
+
+/* convert all fonts and font spacing to rem */
+
+/* Increase font rem at 2600px wide */

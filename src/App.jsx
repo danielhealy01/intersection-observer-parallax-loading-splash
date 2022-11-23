@@ -128,14 +128,14 @@ function App() {
         64 - scrollPosition4 * 60
       }vh`;
     }
-    if (scrollPosition4 <= 0.200) {
-      document.querySelector("h2").style.opacity = 1;
-    }
-    if (scrollPosition4 > 0.200) {
-      document.querySelector("h2").style.opacity = `${
-        1 - (scrollPosition4 * 1.5) 
-      }`;
-    }
+    // if (scrollPosition4 <= 0.200) {
+    //   document.querySelector(h2).style.opacity = 1;
+    // }
+    // if (scrollPosition4 > 0.200) {
+    //   document.querySelector(h2).style.opacity = `${
+    //     1 - (scrollPosition4 * 1.5) 
+    //   }`;
+    // }
     // console.log(scrollPosition4);
     // return () => window.removeEventListener("scroll");
   });
